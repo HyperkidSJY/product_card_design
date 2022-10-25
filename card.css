@@ -1,0 +1,110 @@
+@import url(https://fonts.google.com/download?family=Poppins);
+
+body {
+  background: #e3e3d8;
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+  width: 300px;
+  height: 500px;
+  background: white;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0;
+  transform: scale(0.95);
+  transition: box-shadow 0.5s, transform 0.5s;
+}
+
+div.wrapper:hover {
+  transform: scale(1);
+  box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.details {
+  padding: 20px;
+  float: left;
+  width: calc(70% - 40px);
+}
+
+.details h1,
+p {
+  margin: 0;
+  padding-left: 0;
+}
+
+.bottom {
+  width: 200%;
+  height: 100%;
+  background-color: white;
+}
+
+.left {
+  height: 100%;
+  width: 50%;
+  position: relative;
+  float: left;
+}
+
+.buy {
+  float: right;
+  width: calc(30% - 2px);
+  height: 100%;
+  background: #f1f1f1;
+  border-left: solid thin rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-size: cover;
+
+}
+
+.buy i {
+  font-size: 30px;
+  padding: 30px;
+  height: 10px;
+  padding: 10px;
+}
+
+.product-img {
+  background-size: cover;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.product-img img {
+  width: 100%;
+  height: 80%;
+}
+
+.product-img div {
+  position: absolute;
+  color: black;
+  padding: 8px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  padding-top: 35%;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.product-img.show div {
+  opacity: 1;
+  padding-top: 40%;
+  visibility: visible;
+}
+.material .material-icons{display:none}
+.material.material-off .material-icons:last-of-type {display:inline}
+.material:not(.material-off) .material-icons:first-of-type{display:inline}
+
+
+.btn{
+  height: 100px;
+  width: 90px;
+  border: none;
+}

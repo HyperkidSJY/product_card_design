@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/card.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="top">
+                <div class="product-img">
+                    <img src="/bag.png" alt="bag">
+                    <div>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, odio ducimus sed, molestiae
+                        facere provident exercitationem, autem quibusdam obcaecati facilis sint assumenda consequuntur.
+                        Quia
+                        veniam, deserunt repellendus non iure id.
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="left">
+                    <div class="details">
+                        <h1>Bag</h1>
+                        <p>Rs 250</p>
+                    </div>
+                    <div class="buy">
+                        <button id="toggleVisibilityArchivedAction" class="btn btn-info material">
+                            <i class="material-icons">add_shopping_cart</i>
+                            <i class="material-icons">done</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <script>
+        //for description
+        var textOverImages = document.getElementsByClassName("product-img");
+        var previousTextOverImage;
+        for (var i = 0; i < textOverImages.length; i++) {
+            textOverImages[i].onclick = function () {
+                var classes = this.classList;
+                if (classes.contains("show")) {
+                    classes.remove("show");
+                } else {
+                    if (previousTextOverImage != null)
+                        previousTextOverImage.classList.remove("show");
+                    previousTextOverImage = this;
+                    classes.add("show");
+                }
+            }
+        }
+
+        function stopPropagation(event) {
+            event.stopPropagation();
+        }
+
+        //for add to cart
+        $(function () {
+            $('#toggleVisibilityArchivedAction').click(function (e) {
+                $(this).toggleClass("material-off")
+            })
+        })
+
+    </script>
+
+</body>
+
+</html>
